@@ -22,7 +22,7 @@ rsconf = {
 rs.initiate(rsconf);
 admin = db.getSiblingDB("admin")
 sleep(15000)
-admin.createUser({ user: "root", pwd: "root", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] });
+admin.createUser({ user: "root", pwd: "root", roles: [ { role: "root", db: "admin" } ] });
 
 // db.createUser({user: 'admin', pwd: 'admin', roles: ['readWrite']});
 
