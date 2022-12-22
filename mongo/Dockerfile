@@ -9,6 +9,7 @@ COPY mongo-setup.js .
 COPY mongo-run.sh .
 COPY mongo-replica-setup.sh .
 
+RUN chmod 600 /config/mongodb.key
 RUN chmod +x /config/wait-for-it.sh
 RUN chmod +x /config/mongo-run.sh
 RUN chmod +x /config/mongo-replica-setup.sh
