@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-if [ ! -f /data/mongo-init.flag ]; then
+if [ ! -f /data/mongo-init.flag ] && [ "$IS_PRIMARY" == "YES" ]; then
     echo "Init replicaset"
-    mongo mongodb://mongodb1:27017 mongo-setup.js
+    mongo mongodb://localhost:$PORT mongo-setup.js
     touch /data/mongo-init.flag
 else
     echo "Replicaset already initialized"
