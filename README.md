@@ -19,4 +19,4 @@ In order to connect to the Replica Set from your host machine you have to modify
 127.0.0.1 mongodb3
 ```
 
-Then use the following string to connect (for example, via `Studio 3T`): `mongodb://root@localhost:27017,localhost:27018,localhost:27019/?replicaSet=rsmongo&readPreference=primary&serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1`.
+Then use the following string to connect (for example, via `Studio 3T`): `mongodb://root:root@localhost:27017,localhost:27018,localhost:27019/?replicaSet=rsmongo&readPreference=primary&serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1`.
